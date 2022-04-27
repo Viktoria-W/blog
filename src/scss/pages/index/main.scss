@@ -1,0 +1,16 @@
+.main {
+
+    &__wrapper {
+        background-image: url("../img/bgr.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    &__shadow {
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    &__container {
+    }
+}
+

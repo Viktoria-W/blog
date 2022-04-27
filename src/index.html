@@ -1,17 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 @@include('html/head.html', {
-"title":"Blog"
+"title":"Explorer"
 })
 
 <body>
     <div class="wrapper">
         <h1 class="visually-hidden">Blog Explorer</h1>
-        <!-- Include строчкой ниже можно подлючить на следующие страницы сайта,
-            главная страница соединяет меню навигации и секцию идущую за ней -->
-        @@include('html/header.html', {})
 
-        <main class="main">основное</main>
+        <main class="main">
+            <div class="main__wrapper">
+                <div class="main__shadow">
+                    <div class="main__container container">
+                        <header class="main__header">
+                            <div class="main__header-img-block">
+                                <img src="img/logo.svg" alt="Explorer logo" class="main__header-img">
+                            </div>
+                            <nav class="main__nav">
+                                <ul class="main__nav-list">
+                                    <li class="main__nav-item">
+                                        <a href="#" class="main__nav-link main__nav-link-selected">Home</a>
+                                    </li>
+                                    <li class="main__nav-item">
+                                        <a href="blog.html" class="main__nav-link">Blog</a>
+                                    </li>
+                                    <li class="main__nav-item">
+                                        <a href="#" class="main__nav-link">Categories</a>
+                                    </li>
+                                    <li class="main__nav-item">
+                                        <a href="#" class="main__nav-link">Pick category</a>
+                                    </li>
+                                    <li class="main__nav-item">
+                                        <a href="#" class="main__nav-link">About us</a>
+                                    </li>
+                                    <li class="main__nav-item">
+                                        <a href="#" class="main__nav-link">Contact us</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </header>
+                        <section class="main__articles"></section>
+                    </div>
+                </div>
+            </div>
+        </main>
 
         @@include('html/footer.html', {})
     </div>
