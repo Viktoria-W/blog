@@ -12,12 +12,6 @@
         margin-bottom: 52px;
     }
 
-    &__header-img {
-    }
-
-    &__nav {
-    }
-
     &__nav-list {
         display: flex;
         flex-wrap: wrap;
@@ -74,6 +68,16 @@
             &:first-child {
                 margin-left: 10px;
             }
+        }
+
+        &__nav-link {
+            &:focus {
+                padding-bottom: 5px;
+            }
+        }
+
+        &__nav-link-selected {
+            padding-bottom: 5px;
         }
     }
 }

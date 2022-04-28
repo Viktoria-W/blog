@@ -12,9 +12,6 @@
         display: none;
     }
 
-    &__logo-block {
-    }
-
     &__logo-link {
         &:focus {
             border-bottom: 1px solid #fff;
@@ -31,8 +28,6 @@
         max-width: 1000px;
         margin-top: 5px;
     }
-}
-.burger {
 }
 .nav {
     &__list {
@@ -174,10 +169,10 @@
             transition: 0.4s;
         }
         span::after {
-            transform: rotate(45deg);
+            transform: rotate(315deg);
         }
         span::before {
-            transform: rotate(135deg);
+            transform: rotate(-135deg);
         }
     }
 
