@@ -1,0 +1,158 @@
+.main {
+
+    &__articles {
+    }
+}
+.articles {
+
+    &__conrainer {
+    }
+
+    &__block {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    &__card {
+        
+    }
+}
+.card {
+
+    &__img-block {
+        position: relative;
+        min-height: 330px;
+        background-color: #333;
+    }
+
+    &__bgr {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        max-width: 800px;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    %cardposition {
+        position: relative;
+        z-index: 2;
+    }
+
+    &__topic {
+        @extend %cardposition;
+        top: 10px;
+        left: 90%;
+        background: rgba(0, 0, 0, 0.2);
+        border-radius: 30px;
+        max-width: min-content;
+
+        span {
+            padding: 10px 10px;
+            text-align: center;
+            align-content: center;
+            @extend %montserrat;
+            font-size: 8px;
+            line-height: 300%;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: #FFFFFF;
+        }
+    }
+
+    &__user-block {
+        @extend %cardposition;
+        top: 120px;
+        left: 60px;
+        max-width: 300px;
+        display: grid;
+        grid-template-columns: 40px 250px;
+        grid-template-rows: 40px 10px;
+        column-gap: 14px;
+    }
+
+    &__title {
+        @extend %cardposition;
+        top: 140px;
+        left: 60px;
+        @extend %montserrat;
+        font-size: 28px;
+        line-height: 125%;
+        color: #FFFFFF;
+        max-width: 600px;
+    }
+
+    &__text-block {
+        
+        background-color: #fff;
+    }
+
+    &__text {
+        @extend %lato;
+        font-size: 18px;
+        line-height: 139%;
+        color: #333;
+        padding: 36px 60px 10px;
+    }
+
+    &__link {
+        @extend %lato;
+        font-size: 17px;
+        line-height: 176%;
+        color: #8d4fdb;
+        padding: 0px 60px 35px;
+    }
+}
+.user-block {
+
+    &__img {
+        width: 40px;
+        height: 40px;
+        border-radius: 4px;
+        grid-row: 1/3;
+    }
+
+    &__name {
+        @extend %montserrat;
+        font-size: 18px;
+        line-height: 106%;
+        color: #fff;
+    }
+
+    &__date {
+        @extend %lato;
+        margin-top: -20px;
+        font-size: 13px;
+        line-height: 146%;
+        color: #fff;
+    }
+}
+
+@media (max-width: $tablet) {
+    .card{
+        &__topic {
+            left: 80%;
+        }
+
+        &__user-block {
+            left: 10px;
+            max-width: 200px;
+        }
+
+        &__title {
+            left: 10px;
+            max-width: 400px;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+@media (max-width: $mobile-s) {
+    .card {
+        &__title {
+            max-width: 250px;
+        }
+    }
+}
