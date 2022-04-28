@@ -33,3 +33,15 @@ body {
     clip: rect(0 0 0 0);
     overflow: hidden;
 }
+
+%montserrat {
+    font-family: "Montserrat", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+}
+
+%lato {
+    font-family: "Lato", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+}

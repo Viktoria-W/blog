@@ -1,3 +1,4 @@
+@import "fonts.scss";
 @import "global/reset.scss";
 @import "global/viewport.scss";
 @import "global/vars.scss";
@@ -5,3 +6,5 @@
 @import "layout/header.scss";
 @import "pages/index/main.scss";
 @import "pages/index/index-header.scss";
+@import "pages/index/articles.scss";
+
