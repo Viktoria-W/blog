@@ -33,6 +33,7 @@
         max-width: 800px;
         width: 100%;
         height: auto;
+        max-height: 330px;
         object-fit: cover;
     }
 
@@ -47,10 +48,17 @@
         left: 90%;
         background: rgba(0, 0, 0, 0.2);
         border-radius: 30px;
-        max-width: min-content;
+        max-width: max-content;
+        hyphens: auto;
+        word-break: break-word;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+        
 
         span {
-            padding: 10px 10px;
+            padding: 5px 10px;
             text-align: center;
             align-content: center;
             @extend %montserrat;
@@ -59,7 +67,12 @@
             letter-spacing: 1px;
             text-transform: uppercase;
             color: #FFFFFF;
+            max-width: 130px;
         }
+    }
+
+    &__topic-big {
+        left: 85%;
     }
 
     &__user-block {
@@ -81,12 +94,12 @@
         font-size: 28px;
         line-height: 125%;
         color: #FFFFFF;
-        max-width: 600px;
+        max-width: 500px;
     }
 
     &__text-block {
-        
         background-color: #fff;
+        padding-bottom: 35px;
     }
 
     &__text {
@@ -103,6 +116,10 @@
         line-height: 176%;
         color: #8d4fdb;
         padding: 0px 60px 35px;
+
+        &:focus {
+            text-decoration: underline;
+        }
     }
 }
 .user-block {
@@ -131,26 +148,58 @@
 }
 
 @media (max-width: $tablet) {
-    .card{
+    .card {
+        %tabletcardposition {
+            position: static;
+            top: 0;
+            left: 0;
+        }
+        &__bgr {
+            @extend %tabletcardposition;
+        }
+
+        &__img-block {
+            min-height: min-content;
+        }
+
         &__topic {
             left: 80%;
         }
 
         &__user-block {
-            left: 10px;
             max-width: 200px;
+            @extend %tabletcardposition;
+            padding-left: 20px;
+            padding-top: 10px;
         }
 
         &__title {
-            left: 10px;
             max-width: 400px;
-            margin-bottom: 20px;
+            @extend %tabletcardposition;
+            padding-bottom: 20px;
+            padding-left: 20px;
+        }
+
+        &__text-block {
+            padding-bottom: 20px;
+        }
+    }
+}
+
+@media (max-width: $mobile-l) {
+    .card {
+        &__title {
+            max-width: 300px;
         }
     }
 }
 
 @media (max-width: $mobile-s) {
     .card {
+        &__topic {
+            left: 75%;
+        }
+
         &__title {
             max-width: 250px;
         }
