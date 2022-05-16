@@ -1,22 +1,59 @@
-.main {
+.link-block {
 
-    &__articles {
+    &__title {
+        margin-bottom: 21px;
+        @extend %montserrat;
+        font-size: 30px;
+        line-height: 120%;
+        color: #333;
     }
 }
-.articles {
 
-    &__conrainer {
+.button {
+    padding: 20px 25px;
+    background-color: #8D4FDB;
+    border-radius: 3px;
+    @extend %montserrat;
+    font-size: 10px;
+    line-height: 300%;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #FFFFFF;
+
+    &:hover {
+        background-color: #8e4fdbb4;
     }
+
+    &:focus {
+        text-decoration: underline;
+    }
+
+    &:active {
+        background-color: #333;
+    }
+}
+
+.articles {
 
     &__block {
         max-width: 800px;
         margin: 0 auto;
+        padding-bottom: 99px;
     }
 
-    &__card {
-        
+    &__link-block {
+        background-color: #F1F1F1;
+        text-align: center;
+        min-height: 211px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
     }
 }
+
 .card {
 
     &__img-block {
@@ -154,6 +191,7 @@
             top: 0;
             left: 0;
         }
+
         &__bgr {
             @extend %tabletcardposition;
         }
@@ -188,6 +226,10 @@
 
 @media (max-width: $mobile-l) {
     .card {
+        &__topic-big {
+            left: 65%;
+        }
+
         &__title {
             max-width: 300px;
         }
@@ -198,6 +240,10 @@
     .card {
         &__topic {
             left: 75%;
+        }
+
+        &__topic-big {
+            left: 60%;
         }
 
         &__title {
